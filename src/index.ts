@@ -8,3 +8,15 @@
  * NoteFinder: which will return the corret Scale/Chords/Notes to use
  * NotePlayer: Which will play a set of Notes.
  */
+import {
+  NoteFinder,
+  NoteType,
+} from './note-finder';
+
+
+const result = new NoteFinder().getMatchingChords({
+  noteName: 'A',
+  noteType: NoteType.Minor,
+});
+
+console.info(`Values: ${JSON.stringify(result, null, 2)}`);
